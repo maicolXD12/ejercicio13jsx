@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// 0. guardado de datos simple
+const data = {
+  title_1: "Registro en Nuestra Tienda",
+  paragraph_1: "Nombre de Usuario:",
+  paragraph_2: "Email:",
+  paragraph_3: "Edad:",
+  paragraph_4: "Genero:",
+  paragraph_5: "Masculino",  
+  paragraph_6: "Femenino",
+  paragraph_7: "Recomendado por:",
+  paragraph_8: "Google",
+  paragraph_9: "Yahoo",
+  paragraph_10: "Hotmail",
+  paragraph_11: "Comentarios",
+  paragraph_12: "Acepto terminos y condiciones",
+  }
+
+const title_x = <h1>{data.title_1}</h1>;
+const paragraph_x =(
+    <form>
+      <p>{data.paragraph_1}</p>
+      
+      <input type='text' required="required">
+      
+      <p>{data.paragraph_2}</p>
+      
+      <input type='email' required="required">
+      
+      <p>{data.paragraph_3}</p>
+      
+      <input type='number'>
+      
+      <p>{data.paragraph_4}</p>
+      <input type="radio" name="Masculino"> {data.paragraph_5}
+      
+      <input type="radio" name="Femenino"> {data.paragraph_6}
+      
+      
+      <p>{data.paragraph_7}</p>
+      <select name="Recomendado">
+      <option>{data.paragraph_8}</option>
+      <option>{data.paragraph_9}</option>
+      <option>{data.paragraph_10}</option>
+      </select>
+      
+      <p>{data.paragraph_11}</p>
+      <textarea name='Comentarios' rows='6' cols='20'></textarea>
+      
+      <p>{data.paragraph_12}</p>
+      <input type="radio" name="acepto">
+      <input type='submit' value="Registrar">
+    </form>
+      );
+
+  const element = (
+  <div>
+      {title_x}
+      {paragraph_x}
+      </div>
+);
+
+// Renderiamos o pintamos
+ReactDOM.render(
+  element,// estructura jsx para pintar
+  document.getElementById('root')// elemento donde se pintara
+);
+    </script>
+  </body>
+</html>

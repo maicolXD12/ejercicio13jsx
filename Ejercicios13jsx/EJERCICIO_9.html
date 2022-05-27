@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// 0. guardado de datos simple
+const data = {
+  title_1: "Cartelera de Vuelos - Aeropuerto el Mirador",
+  title_2: "Llegadas", 
+  title_3: "Salidas",
+  paragraph_1: "Aerolinea",
+  paragraph_2: "Nro. Vuelo",
+  paragraph_3: "Estatus",
+  paragraph_4: "Hora estimada",
+  paragraph_5: "Puerta",  
+  paragraph_6: "AIRLAN",
+  paragraph_7: "355",
+  paragraph_8: "Aterrizo",
+  paragraph_9: "2:45 PM",
+  paragraph_10: "3",
+  paragraph_11: "VIAJAR",
+  paragraph_12: "556",
+  paragraph_13: "Retardado",
+  paragraph_14: "2:35 PM",
+  paragraph_15: "6",
+  paragraph_16: "AEROVUELO",
+  paragraph_17: "1234",
+  paragraph_18: "En Vuelo",
+  paragraph_19: "3:45 PM",
+  paragraph_20: "8",
+  paragraph_21: "AIRLAN",
+  paragraph_22: "355",
+  paragraph_23: "Embarcando",
+  paragraph_24: "2:15 PM",  
+  paragraph_25: "1",  
+  }
+
+const title_x = <h1>{data.title_1}</h1>;
+const subtitle_x = <h2>{data.title_2}</h2>;
+const paragraph_x = ( 
+      <table border='1'> 
+      <tr>
+        <td><b>{data.paragraph_1}</b></td>
+        <td><b>{data.paragraph_2}</b></td>
+        <td><b>{data.paragraph_3}</b></td>
+        <td><b>{data.paragraph_4}</b></td>
+        <td><b>{data.paragraph_5}</b></td>
+      </tr>
+      <tr>
+        <td>{data.paragraph_6}</td>
+        <td>{data.paragraph_7}</td>
+        <td>{data.paragraph_8}</td>
+        <td>{data.paragraph_9}</td>
+        <td>{data.paragraph_10}</td>
+      </tr>
+      <tr>
+        <td>{data.paragraph_11}</td>
+        <td>{data.paragraph_12}</td>
+        <td>{data.paragraph_13}</td>
+        <td>{data.paragraph_14}</td>
+        <td>{data.paragraph_15}</td>
+      </tr>
+      <tr>
+        <td>{data.paragraph_16}</td>
+        <td>{data.paragraph_17}</td>
+        <td>{data.paragraph_18}</td>
+        <td>{data.paragraph_19}</td>
+        <td>{data.paragraph_20}</td>
+      </tr>
+    </table>);
+    const subtitle_2x = <h2>{data.title_3}</h2>;
+    const paragraph_2x = (
+      <table border='2'> 
+      <tr>
+        <td><b>{data.paragraph_1}</b></td>
+        <td><b>{data.paragraph_2}</b></td>
+        <td><b>{data.paragraph_3}</b></td>
+        <td><b>{data.paragraph_4}</b></td>
+        <td><b>{data.paragraph_5}</b></td>
+      </tr>
+      <tr>
+        <td>{data.paragraph_21}</td>
+        <td>{data.paragraph_22}</td>
+        <td>{data.paragraph_23}</td>
+        <td>{data.paragraph_24}</td>
+        <td>{data.paragraph_25}</td>
+      </tr>
+    </table>
+    ); 
+const element = (
+  <div>
+      {title_x}
+      {subtitle_x}
+      {paragraph_x}
+      {subtitle_2x}
+      {paragraph_2x}
+  </div>
+);
+
+// Renderiamos o pintamos
+ReactDOM.render(
+  element,// estructura jsx para pintar
+  document.getElementById('root')// elemento donde se pintara
+);
+    </script>
+  </body>
+</html>

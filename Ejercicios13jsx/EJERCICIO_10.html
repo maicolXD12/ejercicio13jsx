@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// 0. guardado de datos simple
+const data = {
+  title_1: "Recetas.com",
+  title_2: "Nuevas Recetas", 
+  title_3: "***Arroz Criollo***",
+  title_4: "Ingredientes",
+  title_5: "Preparación",
+  paragraph_1: "Recetas Principales",
+  paragraph_2: "Postres latinos",
+  paragraph_3: "Bienvenido a nuestro sitio Web sobre gastronomía latina, te invitamos a preparar nuestras recetas.",
+  paragraph_4: "Tiempo de preparación: 45 minutos Numero de porciones: 4",
+  paragraph_5: "Salsa de Tomate",  
+  paragraph_6: "2 cucharadas de aceite 14gr",
+  paragraph_7: "1 cebolla picada 45gr",
+  paragraph_8: "2 dientes de ajo finamente picados 3gr",
+  paragraph_9: "1 pimenton rojo picado en cuadritos 60gr",
+  paragraph_10: "1 taza de arroz blanco 225gr",
+  paragraph_11: "1 taza de maiz desgranado 79gr",
+  paragraph_12: "150 gr de pechuga de pollo cocinado y desmechado",
+  paragraph_13: "Sal al gusto",
+  paragraph_14: "Calentar en una olla el aceite, sofreir la cebolla junto con el ajo y el pimenton por 3 minutos.",
+  paragraph_15: "Adicionar el arroz y continua sofriendo hasta que se dore.",
+  paragraph_16: "Agregar el pollo, el maíz desgranado y las verduras.",
+  paragraph_17: "Mezclar todo, rectificar sal y dejar cocinar hasta que seque.",
+  paragraph_18: "Bajar el fuego, tapar la Olla y continua la cocción por 25 minutos más.",
+  paragraph_19: "Esta rica receta fue proporcionada por Faber Zamora.",
+  }
+
+const title_x = <h1>{data.title_1}</h1>;
+const subtitle_x = <h5><a href='https://www.cocinacaserayfacil.net/recetas-cocina-faciles-rapidas/' target='_blank'>{data.paragraph_1}</a> | <a href='https://www.kiwilimon.com/tips/tips-de-cocina/tips-de-platillos/10-postres-tipicos-de-origen-latino' target='_blank'>{data.paragraph_2}</a> </h5>;
+const paragraph_x = <p>{data.paragraph_3}</p>; 
+const paragraph_2x = <p>{data.paragraph_4}</p>;
+const subtitle_2x = <h3>{data.title_4}</h3>;
+const paragraph_3x =(
+    <ul>
+      <li><b>{data.paragraph_5}</b></li>
+      <li><b>{data.paragraph_6}</b></li>
+      <li><b>{data.paragraph_7}</b></li>
+      <li><b>{data.paragraph_8}</b></li>
+      <li><b>{data.paragraph_9}</b></li>
+      <li><b>{data.paragraph_10}</b></li>
+      <li><b>{data.paragraph_11}</b></li>
+      <li><b>{data.paragraph_12}</b></li>
+      <li><b>{data.paragraph_13}</b></li>
+    </ul>
+    );
+const subtitle_3x = <h3>{data.title_5}</h3>;
+const paragraph_4x =(
+    <ol>
+      <li>{data.paragraph_14}</li>
+      <li>{data.paragraph_15}</li>
+      <li>{data.paragraph_16}</li>
+      <li>{data.paragraph_17}</li>
+      <li>{data.paragraph_18}</li>
+    </ol>
+    );
+  const paragraph_5x = <p>{data.paragraph_19}</p>;
+
+  const element = (
+  <div>
+      {title_x}
+      {subtitle_x}
+      {paragraph_x}
+      {paragraph_2x}
+      {subtitle_2x}
+      {paragraph_3x}
+      {subtitle_3x}
+      {paragraph_4x}
+      {paragraph_5x}
+  </div>
+);
+
+// Renderiamos o pintamos
+ReactDOM.render(
+  element,// estructura jsx para pintar
+  document.getElementById('root')// elemento donde se pintara
+);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <!--Render code React-js-->
+    </div>
+
+    <!-- Cargar React. -->
+    <!-- Nota: cuando se despliegue, reemplazar "development.js" con "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Cargamos nuestro componente de React. -->
+    <script type="text/babel">
+// nota cada codigo que veas documentado de aca para abajo
+// seran diferentes formas de realizarlo con jsx los coloco para
+// que podamos probar y mirar diferentes formas de como podriamos realizarlos
+// los 12 ejercicios
+
+// 0. guardado de datos simple
+const data = {
+  title_1: "El Noticiero Next University",
+  title_2: "Programas de Tecnología", 
+  title_3: "Desarrollador Web",
+  title_4: "Android",
+  title_5: "Programa de negocio",
+  title_6: "Mercadeo Digital",
+  paragraph_1: "Un desarrollador web es un programador especializado, o dedicado de forma específica, en desarrollar aplicaciones de la World Wide Web o aplicaciones distribuidas en red que se ejecutan mediante HTTP desde un servidor web a un navegador web",
+  paragraph_2: "Android es un sistema operativo móvil basado en el núcleo Linux y otros software de código abierto. Fue diseñado para dispositivos móviles con pantalla táctil, como teléfonos inteligentes, tabletas, relojes inteligentes Wear OS, automóviles con otros sistemas a través de Android Auto, al igual los automóviles con el sistema Android Automotive y televisores Android TV.",
+  paragraph_3: "El mercadeo digital es el componente de la mercadotecnia que utiliza internet y tecnologías digitales en línea, como computadoras de escritorio, teléfonos móviles y otras plataformas y medios digitales para promover productos y servicios.",
+  }
+
+const title_x = <h1>{data.title_1}</h1>;
+const subtitle_x = <h2>{data.title_2}</h2>;
+const subtitle_2x = <h3>{data.title_3}</h3>;
+const paragraph_x = <p>{data.paragraph_1}</p>;
+const subtitle_3x = <h3>{data.title_4}</h3>;
+const paragraph_2x = <p>{data.paragraph_2}</p>;
+const subtitle_4x = <h2>{data.title_5}</h2>;
+const subtitle_5x = <h3>{data.title_6}</h3>;
+const paragraph_3x = <p>{data.paragraph_3}</p>;
+
+const element = (
+  <div>
+    {title_x}
+    {subtitle_x}
+    {subtitle_2x}
+    {paragraph_x}
+    {subtitle_3x}
+    {paragraph_2x}
+    {subtitle_4x}
+    {subtitle_5x}
+    {paragraph_3x}
+    </div>
+);
+
+
+// Renderiamos o pintamos
+ReactDOM.render(
+  element,// estructura jsx para pintar
+  document.getElementById('root')// elemento donde se pintara
+);
+    </script>
+  </body>
+</html>
