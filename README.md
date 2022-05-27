@@ -1,7 +1,8 @@
 REACT JSX
 React te ayuda a crear interfaces de usuario interactivas de forma sencilla. Diseña vistas simples para cada estado en tu aplicación, y React se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien ya que las vistas declarativas hacen que tu código sea más predecible, por lo tanto, sea más fácil de depurar.
 
-https://user-images.githubusercontent.com/80140325/170734644-a6d09a7b-711a-4f79-974e-ca3b1ed40689.png
+![logo-react](https://user-images.githubusercontent.com/80133850/170796490-11531729-fc77-4c7b-8a4b-a52c9fbf3182.jpg)
+
 
 
 BASADO EN COMPONENTES
